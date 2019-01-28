@@ -1,0 +1,47 @@
+body {
+  background-color: rgb(250,250,250);
+  margin: 0px; 
+  margin-bottom: 50px;
+}
+
+h1 {
+  font-size: 100px;
+  margin: 0px;
+  text-align: center;
+}
+
+img {
+  width: 500px;
+  height: 400px;
+}
+
+.linkBar {
+  //background-color: blue;
+  background-image: linear-gradient(to right,blue,lightblue,blue);
+  border-color: black;
+  border-bottom-style: solid;
+  border-top-style: solid;
+  margin: 0px;
+  text-align: left;
+}
+
+.linkBar {
+  //background-color: blue;
+  background-image: linear-gradient(to right,blue,lightblue,blue);
+  border-color: black;
+  border-bottom-style: solid;
+  border-top-style: solid;
+  margin: 0px;
+}
+
+.shadow {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.linkButton {
+  border-color: black;
+  border-style: solid;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 20px
+}

@@ -82,7 +82,7 @@
         if (ySpeed > -10) {ySpeed -= 0.5}
         for (i in pipes) {
           pipes[i]['x'] -= 4 + (score / 100000)
-          if (pipes[i]['x'] < 100 && pipes[i]['x'] + 70 > 50 && (y > pipes[i]['y'] || y - 20 < pipes[i]['y'] - 140)) {dead = true}
+          if (pipes[i]['x'] < 100 && pipes[i]['x'] + 70 > 50 && (y + 30 > pipes[i]['y'] || y < pipes[i]['y'] - 140)) {dead = true}
         }
         if (dead == false) {score += 1}
         document.getElementById("display").innerHTML = 'Score: ' + String(score)

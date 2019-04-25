@@ -35,6 +35,7 @@
   </style>
   <body>
     <h1 id="debug">Snek by Louis</h1>
+    <h3 id="score"></h3>
     <canvas id="mahcanvas" width="500" height="500"></canvas><br>
     <script>
       //vars
@@ -49,6 +50,7 @@
       var coiny = Math.floor(Math.random() * 50) * 10;
       var alive = true;
       var turned;
+      var score = 3;
       
       parts[0].x = 250;
       parts[0].y = 250;
@@ -60,12 +62,14 @@
         parts.push({})
         parts[parts.length - 1].x = parts[parts.length - 2].x;
         parts[parts.length - 1].y = parts[parts.length - 2].y;
+        score += 1
       }
       
       spawnPart();
       spawnPart();
       
       function onNewFrame() {
+        document.getElementById("score").innerHTML = String(score);
         if (alive) {
           turned = false;
           ctx.clearRect(0,0,500,500)

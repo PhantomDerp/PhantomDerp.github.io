@@ -50,7 +50,7 @@
       var coiny = Math.floor(Math.random() * 50) * 10;
       var alive = true;
       var turned;
-      var score = 3;
+      var score = 1;
       
       parts[0].x = 250;
       parts[0].y = 250;
@@ -62,14 +62,15 @@
         parts.push({})
         parts[parts.length - 1].x = parts[parts.length - 2].x;
         parts[parts.length - 1].y = parts[parts.length - 2].y;
-        score += 1
+        score += 1;
       }
       
       spawnPart();
       spawnPart();
       
       function onNewFrame() {
-        document.getElementById("score").innerHTML = String(score);
+        document.getElementById("score").innerHTML = "score: " + 
+          String(score);
         if (alive) {
           turned = false;
           ctx.clearRect(0,0,500,500)

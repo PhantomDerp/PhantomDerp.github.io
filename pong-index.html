@@ -18,100 +18,33 @@
   </body>
 </html>
 <!-- Copy and Paste -->
-
 <html>
-  <head>
-    <title>Louis Pong</title>
-    <link rel="stylesheet" href="canvas-style.css">
-  </head>
   <body>
-    <h1>Pong by Louis</h1>
-    <canvas id="myCanvas" class="blackCanvas" width="400" height="400"></canvas><br>
-    <button onclick="p1up()">P1 UP (W)</button>
-    <button onclick="p1down()">P1 DOWN (S)</button>
-    <button onclick="p2up()">P2 UP (I)</button>
-    <button onclick="p2down()">P2 DOWN (K)</button>
-    <script>
-      //vars
-      var canvas = document.getElementById("myCanvas");
-      var ctx = canvas.getContext("2d");
-      var positiveAndNegative = [-5,5]
-      var rise = 5;
-      var run = (positiveAndNegative[Math.ceil(Math.random() * 2 - 1)]);
-      var bally = 50;
-      var ballx = 200;
-      var p1 = 200;
-      var p2 = 200;
-      var gameOver = false;
-      var p1GoingUp = false;
-      var p2GoingUp = false;
-      var p1GoingDown = false;
-      var p2GoingDown = false;
-      //stuff
-      function onNewFrame() {
-        if (gameOver == false) {
-        ctx.clearRect(0,0,400,400);
-        ctx.beginPath();
-        ctx.arc(ballx, bally, 8, 0, Math.PI*2);
-        ctx.fillStyle = "#ffffff";
-        ctx.fill();
-        ctx.closePath();
-        ctx.beginPath();
-        ctx.rect(50,p1 - 50,15,100);
-        ctx.fillStyle = "ffffff";
-        ctx.fill();
-        ctx.closePath();
-        ctx.beginPath();
-        ctx.rect(350,p2 - 50,15,100);
-        ctx.fillStyle = "ffffff";
-        ctx.fill();
-        ctx.closePath();
-        
-        ballx += run;
-        bally += rise;
-        if (bally <= 8 || bally >= 392) {rise *= -1}
-        if (ballx <= 8) {gameOver = true;console.log("P2 Wins")}
-        if (ballx >= 392) {gameOver = true;console.log("P1 Wins")}
-        if ((ballx <= 68 && ballx >= 53 && bally > p1 - 50 && bally < p1 - 50 + 100) || (ballx >= 342 && ballx <= 357 && bally > p2 - 50 && bally < p2 - 50 + 100)) {run *= -1}
-        
-          if (p1GoingUp) {if (p1 > 50) {p1 -= 8}}
-          if (p2GoingUp) {if (p2 > 50) {p2 -= 8}}
-          if (p1GoingDown) {if (p1 < 350) {p1 += 8}}
-          if (p2GoingDown) {if (p1 < 350) {p2 += 8}}
-        }
+    <title>Pong 2 electric boogaloo</title>
+    <style>
+      body {
+        background-color: red;
+        text-align: center;
       }
-      //controls
-      function p1up() {p1 -= 50}
-      function p1down() {p1 += 50}
-      function p2up() {p2 -= 50}
-      function p2down() {p2 += 50}
-      function onStart() {setInterval(onNewFrame,20)}
-      
-      document.addEventListener('keydown', function(event) {
-        if (event.key == 'w') {
-          p1GoingUp = true}
-        if (event.key == 's') {
-          p1GoingDown = true}
-        if (event.key == 'i')  {
-          p2GoingUp = true}
-        if (event.key == 'k')  {
-          p2GoingDown = true}
-      });
 
-      document.addEventListener('keyup', function(event) {
-        if (event.key == 'w') {
-          p1GoingUp = false}
-        if (event.key == 's') {
-          p1GoingDown = false}
-        if (event.key == 'i')  {
-          p2GoingUp = false}
-        if (event.key == 'k')  {
-          p2GoingDown = false}
-      });
+      canvas {
+        background-color: black;
+      }
+
+      h1 {
+        font-size: 75px;
+      }
+
       
-      onNewFrame();
-      setTimeout(onStart,3000);
-      
-    </script>
+      h3 {
+        font-size: 20px;
+        margin: 0px;
+      }
+    </style>
+    <h1>pong 2 electric boogaloo by Louis</h1>
+    <h3 id="display">0 | 0</h3>
+    <canvas id="mahcanvas" width="600" height="300"></canvas><br>
+    <button onclick="retry()">Restart</button>
+    <script src="pong.js"></script>
   </body>
 </html>

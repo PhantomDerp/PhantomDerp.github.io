@@ -1,4 +1,5 @@
-document.getElementById("topbar").innerHTML = "<button class="linkButton" onclick="window.location.href='index.html'">Home</button>
+document.getElementById("topbar").innerHTML = "
+  <button class="linkButton" onclick="window.location.href='index.html'">Home</button>
   <button class="linkButton" onclick="window.location.href='pong-index.html'">Pong</button>
   <button class="linkButton" onclick="window.location.href='hippo-war-index.html'">Hippo War</button>
   <button class="linkButton" onclick="window.location.href='hippo-dungeon.html'">Hippo Dungeon</button>

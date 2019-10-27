@@ -1,41 +1,46 @@
-body {
-  background-color: rgb(250,250,250);
-  margin: 0px; 
-  margin-bottom: 50px;
+* {
+  font-family: Ariel, sans-serif;
 }
 
-h1 {
-  font-size: 100px;
-  margin: 0px;
+body {
+  background-color: red;
+  margin: 0;
+  margin-bottom: 50px;
   text-align: center;
 }
 
-img {
-  width: 500px;
-  height: 400px;
+h1 {
+  font-size: 40px;
+  margin: 0;
+  margin-top: 10px;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
 }
 
-.linkBar {
-  //background-color: blue;
-  background-image: linear-gradient(to right,blue,lightblue,blue);
-  border-color: black;
-  border-bottom-style: solid;
-  border-top-style: solid;
-  margin: 0px;
-  text-align: left;
+h3 {
+  margin: 0;
 }
 
-.linkBar {
-  //background-color: blue;
-  background-image: linear-gradient(to right,blue,lightblue,blue);
-  border-color: black;
-  border-bottom-style: solid;
-  border-top-style: solid;
-  margin: 0px;
+canvas {
+  background-color: black;
+}
+
+footer {
+  background-color: #dddddd;
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  border-top: dashed;
+  box-shadow: 0 0 1px rgba(0,0,0,0.3);
 }
 
 .shadow {
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+
+.imgshadow {
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 .linkButton {
@@ -44,4 +49,15 @@ img {
   margin: 5px;
   border-radius: 5px;
   font-size: 20px
+}
+
+#topbar {
+  background-image: linear-gradient(to right,blue,lightblue,blue);
+  border-color: black;
+  border-bottom-style: solid;
+  border-top-style: solid;
+  margin: 0px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }

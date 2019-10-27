@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pong - The Louis Site</title>
+    <link href="../style.css" rel="stylesheet"/>
+    <style>
+      body {
+        background-color: red;
+        text-align: center;
+      }
+
+      canvas {
+        background-color: black;
+      }
+
+      h3 {
+        font-size: 20px;
+        margin: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="topbar"></div>
+    <script src="../topbar.js"></script>
+    <h1>Pong by Louis</h1>
+    <h3 id="display">0 | 0</h3>
+    <canvas id="mahcanvas" width="600" height="300"></canvas><br>
+    <button onclick="retry()">Reset</button>
+    <script src="script.js"></script>
+  </body>
+</html>

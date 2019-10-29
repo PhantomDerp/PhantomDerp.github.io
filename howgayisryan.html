@@ -6,7 +6,9 @@
     <script>
       var inter = 1;
       function click() {
-        var looop = setInterval(function() {document.write(String(inter) + " Gay ");inter++}, 50)
+        for (var i = 0; i < 1000000; i++) {
+          document.write(String(i) + " Gay ");
+        }
       }
     </script>
   </body>

@@ -8,7 +8,6 @@ var pangle = 0;
 var wpressed = false;
 var apressed = false;
 var dpressed = false;
-var ppressed = false;
 var pxspeed = 0;
 var pyspeed = 0;
 var bullets = {};
@@ -64,7 +63,7 @@ function onNewFrame() {
   //logic
   
   //rapid fire
-  if (ppressed) {spawnBullet(px +  20 * Math.cos(rads(pangle)), py + 20 * Math.sin(rads(pangle)),pxspeed + 2 * Math.cos(rads(pangle)),pyspeed + 2 * Math.sin(rads(pangle)))}
+//  if (fired) {spawnBullet(px +  20 * Math.cos(rads(pangle)), py + 20 * Math.sin(rads(pangle)),pxspeed + 2 * Math.cos(rads(pangle)),pyspeed + 2 * Math.sin(rads(pangle)))}
   
   if (apressed) {pangle -= 3}
   if (dpressed) {pangle += 3}
@@ -168,7 +167,6 @@ document.addEventListener('keydown', function(event) {
   if (event.key == 'w' || event.key == 'W') {wpressed = true}
   if (event.key == 'a' || event.key == 'A') {apressed = true}
   if (event.key == 'd' || event.key == 'D') {dpressed = true}
-  if (event.key == 'p' || event.key == 'P') {ppressed = true}
   if (event.key == ' ') {if (fired === false) {spawnBullet(px +  20 * Math.cos(rads(pangle)), py + 20 * Math.sin(rads(pangle)),pxspeed + 3 * Math.cos(rads(pangle)),pyspeed + 3 * Math.sin(rads(pangle)))} fired = true}
 });
 
@@ -176,6 +174,5 @@ document.addEventListener('keyup', function(event) {
   if (event.key == 'w' || event.key == 'W') {wpressed = false}
   if (event.key == 'a' || event.key == 'A') {apressed = false}
   if (event.key == 'd' || event.key == 'D') {dpressed = false}
-  if (event.key == 'p' || event.key == 'P') {ppressed = false}
   if (event.key == ' ') {fired = false}
 });

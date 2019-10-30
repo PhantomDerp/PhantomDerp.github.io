@@ -168,7 +168,7 @@ document.addEventListener('keydown', function(event) {
   if (event.key == 'w' || event.key == 'W') {wpressed = true}
   if (event.key == 'a' || event.key == 'A') {apressed = true}
   if (event.key == 'd' || event.key == 'D') {dpressed = true}
-  if (event.key == 'p' || event.key == 'P') {ppressed = false}
+  if (event.key == 'p' || event.key == 'P') {ppressed = true}
   if (event.key == ' ') {if (fired === false) {spawnBullet(px +  20 * Math.cos(rads(pangle)), py + 20 * Math.sin(rads(pangle)),pxspeed + 3 * Math.cos(rads(pangle)),pyspeed + 3 * Math.sin(rads(pangle)))} fired = true}
 });
 

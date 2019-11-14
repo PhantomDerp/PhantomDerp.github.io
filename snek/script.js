@@ -5,6 +5,8 @@ var canvas = document.getElementById("mahcanvas");
 var ctx = canvas.getContext("2d");
 //var corpses = [];
 var i;
+var img = document.getElementById('pepsi');
+
 
 //constructors
 function Player(x = 250, y = 250) {
@@ -17,10 +19,10 @@ function Player(x = 250, y = 250) {
       x: this.parts[this.parts.length - 1].x,
       y: this.parts[this.parts.length - 1].y
     });
-  }
+  };
   this.die = function() {
     clearInterval(gameloop);
-  }
+  };
 }
 
 function Coin(x = Math.floor(Math.random() * 50) * 10, y = Math.floor(Math.random() * 50) * 10) {
@@ -29,7 +31,7 @@ function Coin(x = Math.floor(Math.random() * 50) * 10, y = Math.floor(Math.rando
   this.randomize = function() {
     this.x = Math.floor(Math.random() * 50) * 10;
     this.y = Math.floor(Math.random() * 50) * 10;
-  }
+  };
 }
 
 var player = new Player();
@@ -41,7 +43,7 @@ player.spawnPart();
 var gameloop = setInterval(function() {
   //logic
   player.moved = false;
-  player.parts.pop()
+  player.parts.pop();
   player.parts.unshift({x: player.parts[0].x + player.xspeed, y: player.parts[0].y + player.yspeed});
   
   if (player.parts[0].x === coin.x && player.parts[0].y === coin.y) {
@@ -64,13 +66,10 @@ var gameloop = setInterval(function() {
   }
   
   //draw
-  ctx.clearRect(0,0,500,500)
+  ctx.clearRect(0,0,500,500);
   
   ctx.fillStyle = '#00ff00';
-  ctx.beginPath();
-  ctx.rect(coin.x, coin.y, 10, 10);
-  ctx.fill();
-  ctx.closePath();
+  ctx.drawImage(img, coin.x, coin.y, 10, 10);
   
   ctx.fillStyle = '#ffffff';
   for (i in player.parts) {

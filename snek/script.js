@@ -51,6 +51,11 @@ var gameloop = setInterval(function() {
     player.spawnPart();
     player.spawnPart();
     player.spawnPart();
+    player.spawnPart();
+    player.spawnPart();
+    player.spawnPart();
+    player.spawnPart();
+    player.spawnPart();
   }
   
   if (player.parts[0].x === 500 || player.parts[0].y === 500 || player.parts[0].x === -10 || player.parts[0].y === -10) {player.die();}

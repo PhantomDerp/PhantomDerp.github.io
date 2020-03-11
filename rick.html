@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      body {
+        text-align: center;
+        background-color: red;
+        margin: 0;
+      }
+      
+      h1 {
+        margin: 0;
+        font-size: 100px;
+      }
+      
+      button {
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Disable Popup Blocker</h1>
+    <button onclick="for (var i = 0; i < 50; i++) {rickroll()}">rick</button>
+    <script>
+    var wid = screen.width;
+    var hi = screen.height;
+      function rickroll() {
+        window.open('https://youtu.be/dQw4w9WgXcQ', '_blank', 'left=' + String(Math.random() * wid - 400) + ', top=' + String(Math.random() * hi - 400) + ', width=400, height=400');
+      }
+    </script>
+  </body>
+</html>

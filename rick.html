@@ -19,13 +19,28 @@
     </style>
   </head>
   <body>
-    <h1>Disable Popup Blocker</h1>
-    <button onclick="for (var i = 0; i < 50; i++) {rickroll()}">rick</button>
+    <h1>Disable Your Popup Blocker</h1>
+    <button onclick="rickroll()">rick 1</button>
+    <button onclick="for (var i = 0; i < 10; i++) {rickroll()}">rick 10</button>
+    <button onclick="for (var i = 0; i < 50; i++) {rickroll()}">rick 50</button>
+    <button onclick="for (var i = 0; i < 100; i++) {rickroll()}">rick 100</button>
+    <button onclick="for (var i = 0; i < 500; i++) {rickroll()}">rick 500</button>
+    <button onclick="for (var i = 0; i < 1000; i++) {rickroll()}">rick 1000</button>
+    <button onclick="taco()">taco 1</button>
+    <button onclick="for (var i = 0; i < 10; i++) {taco()}">taco 10</button>
+    <button onclick="for (var i = 0; i < 50; i++) {taco()}">taco 50</button>
+    <button onclick="for (var i = 0; i < 100; i++) {taco()}">taco 100</button>
+    <button onclick="for (var i = 0; i < 500; i++) {taco()}">taco 500</button>
+    <button onclick="for (var i = 0; i < 1000; i++) {taco()}">taco 1000</button>
     <script>
     var wid = screen.width;
     var hi = screen.height;
       function rickroll() {
         window.open('https://youtu.be/dQw4w9WgXcQ', '_blank', 'left=' + String(Math.random() * (wid - 400)) + ', top=' + String(Math.random() * (hi - 400)) + ', width=400, height=400');
+      }
+      
+      function taco() {
+        window.open('http://www.tacospin.com', '_blank', 'left=' + String(Math.random() * (wid - 400)) + ', top=' + String(Math.random() * (hi - 400)) + ', width=400, height=400');
       }
     </script>
   </body>
